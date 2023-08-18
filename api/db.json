@@ -2,14 +2,16 @@
     "CarsName": [
         {
             "id": "1",
+            "img": "https://images.unsplash.com/photo-1582639510494-c80b5de9f148?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1143&q=80",
             "name": "Opel",
-            "price": "60.000",
+            "price": "60",
             "km": "77.000"
         },
         {
             "id": "2",
             "name": "Renault",
-            "price": "50.000",
+            "img": "https://images.unsplash.com/photo-1594502225401-a9eab8b405dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1032&q=80",
+            "price": "50",
             "km": "88.000"
         }
     ]
