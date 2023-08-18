@@ -16,13 +16,14 @@ function CarsInfo({ cars }) {
     };
 
     return (
-        <div>
+        <div className="cardDiv">
             {cars.map((item, id) => (
                 <div key={id}>
                     <h2>{item.name}</h2>
                     <img src={item.img}></img>
+                    <p>Kilometre: {item.km} Km</p>
                     {editPriceIndex === id ? (
-                        <div>
+                        <div className="card">
                             <input
                                 type="number"
                                 value={editPrice}
@@ -36,7 +37,6 @@ function CarsInfo({ cars }) {
                             <button onClick={() => handlePriceEdit(id)}>Edit</button>
                         </div>
                     )}
-                    <p>Kilometre: {item.km} Km</p>
                 </div>
             ))
             }

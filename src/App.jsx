@@ -17,7 +17,7 @@ function App() {
   }, [])
 
   return (
-    <div>
+    <div className='App'>
       <CarsInfo cars={cars} />
     </div>
   )
