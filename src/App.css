@@ -5,7 +5,7 @@ img {
 }
 
 .cardDiv {
-    margin-top: 150px;
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -26,4 +26,20 @@ button {
     cursor: pointer;
     background-color: rgb(2, 2, 151);
     color: #fff;
+}
+
+.App {
+    text-align: center;
+    align-items: center;
+}
+
+.filter-input {
+    margin-top: 30px;
+    width: 500px;
+    height: 35px;
+    border-radius: 15px;
+    outline: none;
+    border: 0.5px solid black;
+    font-size: 20px;
+    padding-left: 15px;
 }

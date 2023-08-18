@@ -4,7 +4,9 @@ function Input({ onFilter }) {
 
     return (
         <div>
-            <input onChange={onFilter} />
+            <input className='filter-input'
+                placeholder='Filter'
+                onChange={onFilter} />
         </div>
     )
 }
