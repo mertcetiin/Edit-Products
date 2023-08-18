@@ -1,37 +1,40 @@
-import './App.css'
+import './App.css';
 import CarsInfo from './components/CarsInfo';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import Input from './components/Input';
 
 function App() {
-
   const [cars, setCars] = useState([]);
-  const [filter, setFilter] = useState('');
+  const [carsFilter, setCarsFilter] = useState([]);
 
   const carsAxios = async () => {
-    await axios.get('http://localhost:3000/CarsName')
-      .then((res) => setCars(res.data))
-  }
+    try {
+      const res = await axios.get('http://localhost:3000/CarsName');
+      setCars(res.data);
+      setCarsFilter(res.data);
+    } catch (error) {
+      console.log('Veriler Gelmedi', error);
+    }
+  };
 
   useEffect(() => {
     carsAxios();
-  }, [])
+  }, []);
 
   const onFilter = (e) => {
     const filteredItems = cars.filter((item) =>
       item.name.toLowerCase().includes(e.target.value.toLowerCase())
     );
-    setFilter(filteredItems);
+    setCarsFilter(filteredItems);
   };
 
-  const filteredCarList = filter.length > 0 ? filter : cars;
   return (
     <div className='App'>
       <Input onFilter={onFilter} />
-      <CarsInfo cars={filteredCarList} />
+      <CarsInfo cars={carsFilter} />
     </div>
-  )
+  );
 }
 
 export default App;
